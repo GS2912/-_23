@@ -158,7 +158,7 @@ passport.deserializeUser(function(user, cb) {
  
   
 
-mongoose.connect('mongodb+srv://jj:1Million$@cluster0.msnztf8.mongodb.net/hattBC?retryWrites=true&w=majority').then(console.log("Mere Baba"));
+mongoose.connect('// my personal mongo db cloud database url, cant expose here// ').then(console.log("Mere Baba"));
 
 
 app.get("/auth/google",
