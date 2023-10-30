@@ -1,0 +1,507 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image:linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),url(images/hdi.jpg);
+    background-position: center;
+    background-size:cover;
+    position:relative;
+
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 600;
+  color: rgb(0, 0, 0); 
+}
+
+/* A COOL NAVBAR*/
+button {
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 72px;
+  padding: 0 3px;
+  background: #000000;
+  color: #f9f9f9;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 120px;
+}
+
+.navbar-logo-icon {
+  height: 100px;
+  width: 36px;
+}
+
+@media only screen and (min-width: 400px) {
+  .navbar-logo-icon {
+    height: 24px;
+  }
+}
+
+
+.navbar-menu {
+  display: flex;
+  transition: 0.3s;
+}
+
+.navbar-menu img{
+  height:35px;
+  width:40px;
+  padding:2px 6px;
+  opacity:0.7;
+}
+.navbar-menu button :hover{
+  height:38px;
+  width:42px;
+  opacity:1;
+}
+
+span {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+}
+
+.menu-item:hover span {
+  display: block;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .navbar-menu {
+    flex: 1 1 auto;
+    justify-content: center;
+    margin-right: 120px;
+  }
+}
+
+.navbar-menu > button {
+  position: relative;
+  flex: 0 0 36px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  height: 72px;
+  width: 36px;
+  opacity: 0.8;
+}
+
+.navbar-menu > button.active {
+  opacity: 1;
+}
+
+.navbar-menu > button.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  translate: -50% 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #36b7ee;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-menu > button:last-child {
+    position: absolute;
+    right: 20px;
+  }
+}
+
+/* COVER PAGE */
+
+.text-box{
+    width: 90%;
+    color:rgb(13, 0, 0);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+    padding:10px 10px;
+    color:black !important;
+    
+}
+/* 
+.text-box p{
+    margin:10px 0 40px;
+    font-size:24px;
+    padding:10px 10px;
+    color:rgb(0, 0, 0);
+} */
+
+.hero-btn{
+    display:inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 4px solid white;
+    padding: 12px 34px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0,0,0,0.8));
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.hero-btn:hover{
+    border: 1 px solid hotpink;
+    background: rgba(26, 0, 48, 0.7);
+    transition: 0.5s;
+}
+
+nav .meso{
+    display:none;
+}
+
+
+/* Courses; Unlocking the Power of Data*/
+
+.mainfourse {
+  background-image:linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),url('images/lad1.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.course {
+  background-image: transparent;
+  width: 68%;
+  margin: 30px 30px;
+  padding: 10px; /* Add padding to the top and bottom */
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+}
+
+.course h1 {
+  font-size: 56px;
+  font-weight: 600;
+  color: rgb(0, 0, 0); 
+}
+
+
+p {
+  color: #000000; /* White text color */
+  font-size: 14px;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.course-col {
+  flex-basis: calc(50% - 10px);
+  background-color: #fbc388;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition:box-shadow 0.3s;
+}
+
+.course-col h3 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.course-col :hover {
+  box-shadow: 0 20px 40px rgba(255, 146, 51, 0.4); /* Adjust shadow color for the tech theme */
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+
+/* Mapping FPOs for Success */
+
+.mfos, .efml {
+  width: 80%;
+  margin: auto;
+  padding: 50px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.mfos{
+    width:80%;
+    height:90vh;
+    margin:auto;
+    margin-top: 55px;
+    text-align:center;
+    padding-top:50px;
+    border:2px salmon;
+    border-radius: 10px;
+    
+} 
+
+.mfos-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mfos-col img{
+    width:100%;
+    height:220px;
+    display: block;
+}
+
+
+.layer{
+    background: transparent;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(26, 0, 48, 0.7);
+}
+
+.layer h3{
+    width:100%;
+    color:#f44336;
+    font-size:26px;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    position:absolute;
+    opacity:0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom:49%;
+    opacity:1;
+}
+
+.para{
+  margin-top:3px;
+}
+.para p{
+    width:100%;
+    color:#ffffff;
+    font-size:16px;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
+}
+
+@media (max-width: 700px) {
+  .row {
+      flex-direction: column;
+  }
+}
+
+/* Empowering FPOs with Machine Learning */
+
+.efml h1{
+  padding-top: 20px;
+  margin-bottom: 4px;
+  text-align: center;
+  padding-bottom: 20px;
+  color:rgb(0, 0, 0);
+}
+
+.efml-col{
+    flex-basis: 31%;
+    padding-top: 20px 20px;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align:left;
+    border:2px;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7))
+}
+
+.efml-col h3{
+  padding-top: 20px;
+  margin-bottom: 4px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.efml-col p{
+    padding: 10;
+    color:white;
+    text-align: center;
+
+}
+
+
+@media (max-width: 700px) {
+  .row {
+      flex-direction: column;
+  }
+}
+
+/* <!-- Innovating Policy Impact Analysis --> */
+
+.ipia {
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.ipia h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.ipia-col p {
+  color: #000000;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px;
+}
+
+.container-p {
+  display: flex;
+  flex-direction:column; /* Arrange the boxes and picture side by side */
+  align-items: flex-end; /* Align the items at the top */
+  justify-content: center;
+
+}
+
+.row-p {
+  flex-direction: column; /* Make the boxes appear in a column */
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+}
+
+.ipia-col {
+  background-color: #f8c799;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top:10px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s;
+  max-width: 300px;
+  text-align: center;
+}
+
+.ipia-col h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.ipia-col:hover {
+  box-shadow: 0 20px 40px rgba(255, 146, 51, 0.4);
+}
+
+/* footer */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about {
+    max-width: 300px;
+    text-align: left;
+}
+
+.icons {
+    margin-top: 20px;
+}
+
+.icon {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.icon img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.footer h4 {
+    margin: 0 0 15px 0;
+}
+
+
+
+/* ABOUT US PAGE */
+.sub-header{
+    height:50vh;
+    width:100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(images/lad.jpg);
+    background-position: center;
+    background-size:cover;
+    color:rgb(255, 61, 61);
+}
+
+.sub-header h1{
+    margin-top: 10px;
+    justify-content: center;
+}

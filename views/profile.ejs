@@ -1,0 +1,58 @@
+
+<form action="/search" method="post">
+    <section>
+        <label for="username">Department</label>
+        <input id="username" name="Reg" type="text" autocomplete="username" required autofocus>
+    </section>
+    <section>
+        <label for="username">Department</label>
+        <input id="username" name="State" type="text" autocomplete="username" required autofocus>
+    </section>
+    <section>
+        <label for="username">Department</label>
+        <input id="username" name="district" type="text" autocomplete="username" required autofocus>
+    </section>
+    <!-- <section>
+        <label for="username">Department</label>
+        <input id="username" name="Program" type="text" autocomplete="username" required autofocus>
+    </section> -->
+    <button type="submit">Filter</button>
+</form>
+
+<hr>
+
+
+<!-- ............../////////////////....................////////////////////................................/////////////////................................................. -->
+
+<table>
+  <tr>
+    <td></td>
+    <td>Name</td>
+    <td>Registeration</td>
+  </tr>
+  <% 
+int i =0;
+while(i<fpo.length()){%>
+
+
+  <tr>
+    <td><%= fpo[i].name %></td>
+    <td><%= fpo[i].Reg %></td>
+    <td><%= fpo[i].State %></td>
+    <td><%= fpo[i].District %></td>
+    <td><%= fpo[i].Add %></td>
+    <td><%= fpo[i].email %></td>
+    <td><%= fpo[i].mobile %></td>
+    <td><%= fpo[i].DOR %></td>
+    <td><%= fpo[i].RInst %></td>
+    <td><%= fpo[i].crops %></td>
+    <td><%= fpo[i].Program %></td>
+    
+
+
+  </tr>
+
+    <%i++;
+}%>
+    
+</table>

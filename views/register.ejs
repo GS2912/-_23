@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+
+<h1>Sign up</h1>
+<form action="/signup" method="post">
+    <section>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="email" autocomplete="username" required>
+    </section>
+    <section>
+      <label for="username">Mobile</label>
+      <input id="username" name="mobile" type="phone" autocomplete="0000099999" >
+  </section>
+    <section>
+        <label for="new-password">Password</label>
+        <input id="new-password" name="password" type="password" autocomplete="new-password" required>
+    </section>
+    <button type="submit">Sign up</button>
+</form>
+
+    <div class="col-sm-4">
+      <div class="card social-block">
+        <div class="card-body">
+          <a class="btn btn-block" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign Up with Google
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%- include('partials/header') %>
